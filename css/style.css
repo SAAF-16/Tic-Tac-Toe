@@ -23,6 +23,7 @@
 html {
   height: 100vh;
   background-color: white;
+  min-width: 500px;
 }
 body {
   user-select: none;
@@ -145,6 +146,9 @@ h1 {
   font-size: 15px;
 }
 @media screen and (max-width: 500px) {
+  html{
+    min-width: 370px;
+  }
   #controller_board {
     height: 350px;
     width: 350px;
