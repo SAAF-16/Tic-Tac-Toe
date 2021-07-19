@@ -50,6 +50,7 @@ h1 {
   height: 15%;
   justify-content: space-around;
   padding: 10px;
+  gap: 2px;
 }
 .player_side {
   width: 40%;
@@ -142,4 +143,39 @@ h1 {
   text-align: center;
   padding: 1px;
   font-size: 15px;
+}
+@media screen and (max-width: 500px) {
+  #controller_board {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+  }
+  #selectors{
+    height: 20%;
+  }
+  h1{
+    font-size: 50px;
+  }
+  #playerOne_name,
+  #playerTwo_name{
+    height: 20px;
+  }
+  #playerOne_selector,
+  #playerTwo_selector{
+    height: 20px;
+  }
+  #winner_text{
+    font-size: 15px;
+    line-height: 5px;
+  }
+  #newGame_button{
+    height: 40px;
+    align-self: center;
+  }
+  .box_marked {
+    font-size: 40px;
+  }
+  #creator{
+    margin: 20px auto;
+  }
 }
