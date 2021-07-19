@@ -12,7 +12,7 @@ const game_board = (() => {
         return board;
     };
     //converts an index x to board coordinates [x,y]
-    function converter(x) {     
+    function converter(x) {
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
                 if (x == 0) {
@@ -51,7 +51,7 @@ const game_board = (() => {
 
 const player = (type, name) => {
     //represents the selected cell on the board
-    let selected = 0;       
+    let selected = 0;
     let active = true;
 
     const set_selected = (x) => {
@@ -113,7 +113,7 @@ const visual_manager = (() => {
         playerOne_name.disabled = true;
         playerTwo_name.disabled = true;
         //the listener is added only one time at the beginning
-        if (!started) {     
+        if (!started) {
             started = true;
             div_game_board.addEventListener('click', (e) => {
                 game_manager.humanMove(e.target.id);
@@ -163,7 +163,7 @@ const game_manager = (() => {
     let round = -1;
     let active_player;
     //player used in the minimax simulations
-    let dummy_player = player("Human", "");     
+    let dummy_player = player("Human", "");
     let dummy_moves = [];
 
     function start(typeOne, typeTwo, nameOne, nameTwo) {
@@ -238,7 +238,7 @@ const game_manager = (() => {
     // if called with test it's a minimax simulation and it returns -10 for win and 0 for draw
     function check_end(test) {
         if (win_combo()) {
-            if (test != undefined) return -10;  
+            if (test != undefined) return -10;
             if (round > 9) return true;
             if (round % 2 == 1) visual_manager.endGame(player_one.name + " won!");
             else visual_manager.endGame(player_two.name + " won!");
@@ -304,9 +304,9 @@ const game_manager = (() => {
         round % 2 == 0 ? simbol = 1 : simbol = -1;
         let ende = check_end(1);
         //win situation
-        if (ende) return { value: ende }; 
+        if (ende) return { value: ende };
         //draw situation      
-        if (ende == 0) return { value: ende };    
+        if (ende == 0) return { value: ende };
 
         let best = { value: -Infinity };
         for (let move of game_board.get_validMoves()) {
@@ -324,7 +324,7 @@ const game_manager = (() => {
                 if (value != 10 && value < 10) {
                     if (value > best.value) best = { value, dummy_moves: [] };
                     // keep track of equally valued moves
-                    best.dummy_moves.push(move); 
+                    best.dummy_moves.push(move);
                 }
             }
         }
