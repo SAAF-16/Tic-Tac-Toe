@@ -20,6 +20,52 @@
 
 <body>
 
+    <div>
+        <h1>Tic-Tac-Toe</h1>
+        <div id="controller_board">
+            <div id="selectors">
+                <div class="player_side">
+
+                    <div id="playerOne_data">
+                        <input id="playerOne_name" placeholder="Insert your name" type="text">
+                        <select name="selector" id="playerOne_selector">
+                            <option selected value="Human">Human</option>
+                            <option value="Easy AI">Easy AI</option>
+                            <option value="Medium AI">Medium AI</option>
+                            <option value="Hard AI">Hard AI</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="button" value="New Game" id="newGame_button">
+                <div class="player_side">
+                    <div id="playerTwo_data">
+                        <input id="playerTwo_name" placeholder="Insert your name" type="text">
+                        <select name="selector" id="playerTwo_selector">
+                            <option value="Human">Human</option>
+                            <option selected value="Easy AI">Easy AI</option>
+                            <option value="Medium AI">Medium AI</option>
+                            <option value="Hard AI">Hard AI</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="game_board">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+            <div id="bottom">
+                <p id="winner_text"></p>
+            </div>
+        </div>
+    </div>
+    <div id="creator"><span >developed by <a href="https://github.com/SAAF-16" target="_blank" rel="noopener">SAAF</a></span></div>
 </body>
 <script src="src/script.js"></script>
 
